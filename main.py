@@ -1,8 +1,15 @@
-def function(a , b):
-    return (a + b)
+class Car:
 
-def diff(a , b):
-    return (a - b)
+    def __init__(self, name: object, make: object, model: object) -> object:
+        self.name = name
+        self.make = make
+        self.model = model
+        Car.car_count += 1
 
-print(function(40, 15))
-print(diff(75, 12))
+    def start(self):
+        print("Engine is running")
+
+car_a = Car(name='Toyota', make= 'Corolla' , model = '2015')
+car_a.start()
+print(car_a.name)
+print(car_a.car_count)
